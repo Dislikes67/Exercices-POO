@@ -1,6 +1,6 @@
 <h1>Exercice 4</h1>
 
-<p>Créer une classe voiture possédant les propriétés suivantes: marques, modèle, nbPortes, et vitesseActuelle ainsi que les méthodes démarrer(), accelerer() et stopper() en plus des accesseurs get et set traditionnels.</p>
+<p>Créer une classe voiture possédant les propriétés suivantes: marques, modèle, nbPortes, et vitesse actuelle ainsi que les méthodes démarrer(), accelerer() et stopper() en plus des accesseurs get et set traditionnels.</p>
 
 <?php
 
@@ -39,6 +39,38 @@ public function getVitesseActuelle() : int {
 
 public function getOnOff() : bool {
     return $this->onOff;
+}
+
+public function demarrer() {
+
+    if ($this->onOff) {
+        $this->onOff = true;
+
+        echo "<p>Le véhicule $this démarre</p>";
+    }
+    else {
+        echo "<p>Le véhicule $this veut démarrer.
+        Le véhicule est déjà démarré !</p>";
+    }
+}
+
+public function stopper() {
+
+    if ($this->onOff) {
+        $this->onOff = false;
+        $this->vitessActuelle = 0;
+
+        echo "<p>Le véhicule $this est stoppé.
+            Sa vitesse est de $this->vitesseActuelle km / h </p>";
+    }
+    else {
+        echo "<p> Le véhicule $this veut se stopper.
+        Le véhicule est déjà à l'arrêt !</p>";
+    }
+}
+
+public function accelerer(int $acceleration) {
+    
 }
  
 
