@@ -2,12 +2,12 @@
 
 class Calculatrice {        //class = plan de construction
     
-    function additionner (int $a, int $b): int (        
+    public function additionner (int $a, int $b): int {       
         return $a + $b;
-    ) 
+}
                                             //Définir les fonctionnalitées à l'intérieur 
-    function afficher (int $n):{
-        echo $n 
+     public function afficher (int $n): void{
+        echo $n; 
     }
         
 
