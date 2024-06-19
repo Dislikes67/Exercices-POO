@@ -7,8 +7,8 @@
 <?php
 
 class CalculerAge{                   // Création d'une class.
-    private $naissance;               // La classe contient deux propriétés privées qui stock dates de naissance + date actuelle.
-    private $date;                   
+    private DateTime $naissance;               // La classe contient deux propriétés privées qui stock dates de naissance + date actuelle.
+    private DateTime $date;                   
 
 
     public function __construct($naissance,$date) {
