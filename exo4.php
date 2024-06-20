@@ -11,16 +11,16 @@ class Voiture {
     private int $vitesseActuelle;
     private bool $onOff;
 
-    public function __construct(int $numero, string $marque, string $modele, int $nbPortes) {
+    public function __construct(string $marque, string $modele, int $nbPortes) {
 
         $this->marque = $marque;
-        $this->modele = $modele;
+        $this->modele = $modele;        //Non modifiable
         $this->nbPortes = $nbPortes;
 
         $this->vitesseActuelle = 0;
-        $this->OnOff = false;
+        $this->onOff = false;           //Modifiable
     }
-
+    
     public function getMarque() : string{
     return $this->marque;
     }
@@ -28,7 +28,7 @@ class Voiture {
     public function getModele() : string{
         return $this->modele;
     }
-
+                                                // Getters
     public function getNbPortes() : int {
         return $this->nbPortes;
     }
@@ -50,7 +50,7 @@ class Voiture {
     public function setMarque(string $marque){
         $this->marque = $marque;
     }
-
+                                                    // Setters
     public function setNbPortes(int $nbPortes){
         $this->nbPortes = $nbPortes;
     }
@@ -63,11 +63,11 @@ class Voiture {
         $this->onOff = $onOff;
     }
 
-
+        // Method
 
     public function demarrer() {
 
-        if (!$this->onOff) {
+        if (!$this->onOff) {    
              $this->onOff = true;
 
             echo "<p>Le véhicule $this démarre.</p>";
@@ -82,7 +82,7 @@ class Voiture {
 
         if ($this->onOff) {
             $this->onOff = false;
-            $this->vitessActuelle = 0;
+            $this->vitesseActuelle = 0;
 
             echo "<p>Le véhicule $this est stoppé.
                 Sa vitesse est de $this->vitesseActuelle km / h </p>";
@@ -105,7 +105,7 @@ class Voiture {
         }   
     }
 
-    public function ralentir(int $ralentissement){
+    public function ralentir(int $ralentissement) {
 
         if ($ralentissement > $this->vitesseActuelle) {
             echo "Le véhicule ne peut pas ralentir d'avantage !";
@@ -123,14 +123,43 @@ class Voiture {
 
         $etat = ($this->onOff) ? "démarrée" : "à l'arrêt";
 
-        return "<p>Nom et modèle du véhicule : $this</p>
+        return "<p>Nom et modèle du véhicule : $this->marque $this->modele</p>
                 <p>Nombre de portes : $this->nbPortes</p>
-                <p>Le véhicule $this est $etat</p>
+                <p>Le véhicule est $etat</p>
                 <p> Sa vitesse actuelle est de : $this->vitesseActuelle km / h</p>";
     }
 
-    public function __toString(){
-        return "$this->marque $this->modele";
+    public function __toString(){ //permet d'afficher directement les informations de la voiture (marque et modèle) en utilisant l'objet dans un contexte de chaîne de caractères.
+        return "$this->marque $this->modele $this->nbPortes";
     }
 }
+
+$Voiture1 = new Voiture("Audi", "A5", 4);
+$Voiture2 = new Voiture("Citroen", "C3", 4);
+$Voiture3 = new Voiture("Fiat", "Multipla", 4);
+$Voiture4 = new Voiture("Toyota", "Prius", 4);
+$Voiture5 = new Voiture("Triumph", "Spitfire", 2);
+
+$Voiture3->demarrer();
+$Voiture3->accelerer(50);
+$Voiture3->ralentir(20);
+$Voiture3->accelerer(170);
+echo $Voiture3->afficherInfos();
+$Voiture3->stopper();
+$Voiture3->accelerer(50);
+echo $Voiture3->afficherInfos(  );
+
+
+
+// méthode magique : comment on veut représenter l'objet sous forme de string
+    //pour pouvoir afficher marque + modele en évitant les répétitions
+
+
+
+
+
+
+
+
+
 ?>
