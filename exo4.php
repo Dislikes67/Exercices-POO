@@ -8,8 +8,8 @@ class Voiture {
     private string $marque;
     private string $modele;
     private int $nbPortes;
-    private int $vitessActuelle;
-    private bool $OnOff;
+    private int $vitesseActuelle;
+    private bool $onOff;
 
     public function __construct(int $numero, string $marque, string $modele, int $nbPortes) {
 
@@ -67,7 +67,7 @@ public function setOnOff(bool $onOff){
 
 public function demarrer() {
 
-    if ($this->onOff) {
+    if (!$this->onOff) {
         $this->onOff = true;
 
         echo "<p>Le véhicule $this démarre.</p>";
@@ -95,7 +95,7 @@ public function stopper() {
 public function accelerer(int $acceleration) {
 
     if ($this->onOff) {
-        $this->VitesseActuelle += $acceleration; //cette ligne augmente la vitesse actuelle de la voiture en ajoutant la valeur de acceleration.        
+        $this->vitesseActuelle += $acceleration; //cette ligne augmente la vitesse actuelle de la voiture en ajoutant la valeur de acceleration.        
         
         echo "<p>Le véhicule $this accélère de $acceleration km / h</p>";
     }
@@ -104,12 +104,35 @@ public function accelerer(int $acceleration) {
             echo "<p>Pour accélérer il faut démarrer le véhicule $this !</p>";
         }   
 }
- 
+
+public function ralentir(int $ralentissement){
+
+    if ($ralentissement > $this->vitesseActuelle) {
+        echo "Le véhicule ne peut pas ralentir d'avantage !";
+    }
+    elseif ($this->vitesseActuelle > 0){
+        $this->vitesseActuelle -= $ralentissement;
+        echo "<p> Le véhicule $this ralenti de $ralentissement. Sa nouvelle vitesse est de $this->vitesseActuelle km / h</p>";
+    }
+    else {
+        echo"<p> Pour ralentir, il faut démarrer le véhicule $this !</p>";
+    }
+}
+
+public function afficherInfos() {
+
+    $etat = ($this->onOff) ? "démarrée" : "à l'arrêt";
+
+    return "<p>Nom et modèle du véhicule : $this</p>
+    <p>Nombre de portes : $this->nbPortes</p>
+    <p>Le véhicule $this est $etat</p>
+    <p> Sa vitesse actuelle est de : $this->vitesseActuelle km / h</p>;
+}
+    
 
 
 
 }
-
 
 
 
