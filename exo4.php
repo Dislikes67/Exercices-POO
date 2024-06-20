@@ -147,7 +147,7 @@ $Voiture3->accelerer(170);
 echo $Voiture3->afficherInfos();
 $Voiture3->stopper();
 $Voiture3->accelerer(50);
-echo $Voiture3->afficherInfos(  );
+echo $Voiture3->afficherInfos();
 
 
 
