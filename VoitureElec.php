@@ -4,9 +4,52 @@
 
 <?php
 
-class VoitureElec {
-    
+class VoitureElec  extends Voiture2 {
+
+    private int $autonomie;
+
+    public function __construct(string $marque, string $modele, int $autonomie) {
+        parent::__construct($marque, $modele);
+        $this->autonomie = $autonomie;
+    }
+
+    public function getAutonomie(): int {
+        return $this->autonomie;
+    }
+
+    public function setAutonomie() {
+        $this->autonomie = $autonomie;
+    }
+
+    public function afficherInfos() {
+        return parent::infos() . "Autonomie du véhicule : $this->autonomie";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+    
+
 
 
 
