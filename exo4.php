@@ -95,13 +95,16 @@ public function stopper() {
 public function accelerer(int $acceleration) {
 
     if ($this->onOff) {
-        $this->VitesseActuelle += $acceleration;
-        $this->getVitesseActuelle < 0;
+        $this->VitesseActuelle += $acceleration; //cette ligne augmente la vitesse actuelle de la voiture en ajoutant la valeur de acceleration.        
+        
+        echo "<p>Le véhicule $this accélère de $acceleration km / h</p>";
     }
-    
+
+        else{
+            echo "<p>Pour accélérer il faut démarrer le véhicule $this !</p>";
+        }   
 }
  
-
 
 
 
