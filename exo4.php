@@ -41,16 +41,40 @@ public function getOnOff() : bool {
     return $this->onOff;
 }
 
+
+
+public function setModele(string $modele){
+    $this->modele = $modele;
+}
+
+public function setMarque(string $marque){
+    $this->marque = $marque;
+}
+
+public function setNbPortes(int $nbPortes){
+    $this->nbPortes = $nbPortes;
+}
+
+public function setVitesseActuelle(int $vitesseActuelle){
+    $this->vitesseActuelle = $vitesseActuelle;
+}
+
+public function setOnOff(bool $onOff){
+    $this->onOff = $onOff;
+}
+
+
+
 public function demarrer() {
 
     if ($this->onOff) {
         $this->onOff = true;
 
-        echo "<p>Le véhicule $this démarre</p>";
+        echo "<p>Le véhicule $this démarre.</p>";
     }
     else {
-        echo "<p>Le véhicule $this veut démarrer.
-        Le véhicule est déjà démarré !</p>";
+        echo "<p>Le véhicule est déjà démarré !</p>";
+        
     }
 }
 
@@ -64,12 +88,16 @@ public function stopper() {
             Sa vitesse est de $this->vitesseActuelle km / h </p>";
     }
     else {
-        echo "<p> Le véhicule $this veut se stopper.
-        Le véhicule est déjà à l'arrêt !</p>";
+        echo "<p>Le véhicule est déjà à l'arrêt !</p>";   
     }
 }
 
 public function accelerer(int $acceleration) {
+
+    if ($this->onOff) {
+        $this->VitesseActuelle += $acceleration;
+        $this->getVitesseActuelle < 0;
+    }
     
 }
  
