@@ -1,7 +1,7 @@
 <?php
 
-require_once "voiture2.php";
-require_once "voitureElec.php";
+require_once "Voiture2.php";
+require_once "VoitureElec.php";
 
 
 
