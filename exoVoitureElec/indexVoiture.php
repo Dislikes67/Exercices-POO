@@ -5,15 +5,15 @@ require_once "VoitureElec.php";
 
 
 
-$Voiture1 = new Voiture2("Peugeot", "308");
-$VoitureElec = new VoitureElec("BMW", "I3", 150);
+$voiture1 = new voiture2("Peugeot", "308");
+$voitureElec = new voitureElec("BMW", "I3", 150);
 
 
 
 
 
-echo $Voiture1->afficherInfos() . "<br>";
-echo $VoitureElec->afficherInfos() . "<br>";
+echo $voiture1->afficherInfos() . "<br>";
+echo $voitureElec->afficherInfos() . "<br>";
 
 
 

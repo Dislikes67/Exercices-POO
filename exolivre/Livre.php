@@ -1,6 +1,6 @@
 <?php
 
-class Livre {
+class Livre extends Auteur {
     private string $titre;
     private int $parution;
     private int $nbPages;
@@ -33,7 +33,7 @@ class Livre {
 
 
 
-    public function setTitre(string $Titre){
+    public function setTitre(string $titre){
         $this->titre = $titre;
     }
 
@@ -62,6 +62,6 @@ public function setPrix(int $prix){
         return "$this->titre $this->parution $this->nbPages $this->prix";
     }
 }
-
+}
 
 ?>
