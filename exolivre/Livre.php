@@ -5,15 +5,15 @@
 
 class Livre {
     private string $titre;
-    private int $nbPages;
     private int $parution;
+    private int $nbPages;
     private int $prix;
 
-    public function __construct(string $titre, int $nbPages, int $parution, int $prix){
+    public function __construct(string $titre, int $parution, int $nbPages, int $prix){
 
             $this->titre = $titre;
-            $this->nbPages = $nbPages;
             $this->parution = $parution;
+            $this->nbPages = $nbPages;
             $this->prix = $prix;
     } 
 
@@ -22,12 +22,12 @@ class Livre {
         return $this->titre;
     }
 
-    public function getNbPages() : int{
-        return $this->nbPages;
-    }
-
     public function getParution() : int{
         return $this->parution;
+    }
+    
+    public function getNbPages() : int{
+        return $this->nbPages;
     }
 
     public function getPrix() : int{
@@ -40,26 +40,30 @@ class Livre {
         $this->titre = $titre;
     }
 
-    public function setNbPages(int $nbPages){
-        $this->nbPages = $nbPages;
-    }
-
     public function setParution(int $parution){
         $this->parution = $parution;
     }
+    
+    public function setNbPages(int $nbPages){
+        $this->nbPages = $nbPages;
+}
 
-    public function setPrix(int $prix){
+public function setPrix(int $prix){
         $this->prix = $prix;
     }
  
     
     
     public function afficherBibliographie(){
-        return "<h1>Livre de Stephen King</h1>
+        return "<h1>Livres de Stephen King</h1>
                 <p>$this->titre</p>
-                <p>$this->nbPages</p>
-                <p>$this->parution</p>
-                <p>$this->prix</p>";
+                <p>( $this->parution )</p>
+                <p>$this->nbPages pages</p>
+                <p>$this->prix €</p>";
+    }
+
+    public function __toString(){
+        return "$this->titre $this->parution $this->nbPages $this->prix";
     }
 }
 
