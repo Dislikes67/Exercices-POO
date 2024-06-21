@@ -9,7 +9,7 @@ class Auteur{
         $this->prenom = $prenom;
         $this->nom = $nom;
     }
-
+                                                        
     public function getPrenom() : string{
         return $this->prenom;
     }

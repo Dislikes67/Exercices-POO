@@ -11,7 +11,7 @@ class Livre extends Auteur {
 
             $this->titre = $titre;
             $this->parution = $parution;
-            $this->nbPages = $nbPages;
+            $this->nbPages = $nbPages;                  //add livre to auteur 
             $this->prix = $prix;
             $this->auteur = $auteur;
     } 
