@@ -7,7 +7,7 @@ class Livre extends Auteur {
     private int $prix;
     private Auteur $auteur;
 
-    public function __construct(string $titre, int $parution, int $nbPages, int $prix){
+    public function __construct(string $titre, int $parution, int $nbPages, int $prix, Auteur $auteur){
 
             $this->titre = $titre;
             $this->parution = $parution;
@@ -53,6 +53,10 @@ class Livre extends Auteur {
 
     public function setPrix(int $prix){
         $this->prix = $prix;
+    }
+
+    public function setAuteur(Auteur $auteur){
+        $this ->auteur = $auteur;
     }
 
 

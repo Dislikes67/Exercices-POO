@@ -30,7 +30,7 @@ class Auteur{
 
 
     public function afficherBibliographie(array $livres): string {
-        $result = "Livres de" . $this->auteur."<br>";
+        $result = "Livres de" . $this->prenom ." ". $this->nom . " :<br>";
         foreach ($livres as $livre) {
             if ($livre->getAuteur() == $this){
                 $result .= $livre . "<br>"; 
@@ -41,6 +41,6 @@ class Auteur{
     }
 
     public function __toString() : string {
-        return "$this->auteur";
+        return $this->prenom . " " . $this->nom;
     }
 }

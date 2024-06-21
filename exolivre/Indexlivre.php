@@ -3,7 +3,7 @@
 require_once "Livre.php";
 require_once "Auteur.php";
 
-$auteur = new Auteur ("Stephen", "King");  // instances d'auteurs
+$auteur1 = new Auteur ("Stephen", "King");  // instances d'auteurs
 
 $livre1 = new Livre ("Ca", 1986, 1138, 20);
 $livre2 = new Livre ("Simetierre",1983,374,15);
@@ -12,5 +12,5 @@ $livre4 = new Livre ("Shining", 1977,447,16);
 
 $livres = [$livre1, $livre2, $livre3, $livre4, $livre5];
 
-echo $auteur->afficherBibliographie($livres) ."<br>";
+echo $auteur1->afficherBibliographie($livres) ."<br>";
 
