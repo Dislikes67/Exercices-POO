@@ -21,7 +21,7 @@ class Voiture2 {
 
 
     public function setMarque(string $marque){
-        return $this->marque;
+        $this->marque = $marque;
     }
     
     public function setModele(string $modele) {
@@ -38,8 +38,5 @@ class Voiture2 {
     }
 }
 
-$Voiture1 = new Voiture2("Peugeot", "308");
-$VoitureElec = new VoitureElec("BMW", "I3 150");
-echo $Voiture1->afficherInfos() . "<br>";
-echo $VoitureElec->afficherInfos() . "<br>";
+
 ?>

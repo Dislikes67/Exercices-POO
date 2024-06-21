@@ -22,9 +22,11 @@ class VoitureElec  extends Voiture2 {
     }
 
     public function afficherInfos() {
-        return parent::infos() . "Autonomie du véhicule : $this->autonomie";
+        return parent::afficherInfos() . "<p>Autonomie du véhicule : $this->autonomie</p>";
     }
+}
 
+?>
 
 
 
