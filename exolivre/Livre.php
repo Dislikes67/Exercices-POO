@@ -1,6 +1,3 @@
-<h1>Créer un projet orienté objet permettant de gérer des livres et leurs auteurs respectifs.</h1>
-
-
 <?php
 
 class Livre {
@@ -55,11 +52,11 @@ public function setPrix(int $prix){
     
     
     public function afficherBibliographie(){
-        return "<h1>Livres de Stephen King</h1>
-                <p>$this->titre</p>
-                <p>( $this->parution )</p>
-                <p>$this->nbPages pages</p>
-                <p>$this->prix €</p>";
+        return "<h2>Livres de Stephen King</h2>
+                $this->titre
+                ( $this->parution ) :
+                $this->nbPages pages
+                $this->prix €";
     }
 
     public function __toString(){
@@ -67,25 +64,12 @@ public function setPrix(int $prix){
     }
 }
 
+$Livre1 = new Livre ("Ca", 1986, 1138, 20);
+$Livre2 = new Livre ("Simetierre",1983,374,15);
+$Livre3 = new Livre ("Le Fléau",1978, 823,14);
+$Livre4 = new Livre ("Shining", 1977,447,16);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+echo $Livre1->afficherBibliographie();
 
 
 ?>

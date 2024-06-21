@@ -130,7 +130,7 @@ class Voiture {
     }
 
     public function __toString(){ //permet d'afficher directement les informations de la voiture (marque et modèle) en utilisant l'objet dans un contexte de chaîne de caractères.
-        return "$this->marque $this->modele $this->nbPortes";
+        return "$this->marque $this->modele $this->nbPortes";  //pour pouvoir afficher marque + modele en évitant les répétitions
     }
 }
 
@@ -148,18 +148,6 @@ echo $Voiture3->afficherInfos();
 $Voiture3->stopper();
 $Voiture3->accelerer(50);
 echo $Voiture3->afficherInfos();
-
-
-
-// méthode magique : comment on veut représenter l'objet sous forme de string
-    //pour pouvoir afficher marque + modele en évitant les répétitions
-
-
-
-
-
-
-
 
 
 ?>
