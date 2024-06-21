@@ -4,7 +4,7 @@
 
 <?php
 
-class VoitureElec  extends Voiture2 {
+class VoitureElec extends Voiture2 {
 
     private int $autonomie;
 
@@ -24,9 +24,7 @@ class VoitureElec  extends Voiture2 {
     public function afficherInfos() {
         return parent::afficherInfos() . "<p>Autonomie du véhicule : $this->autonomie</p>";
     }
-}
 
-?>
 
 
 

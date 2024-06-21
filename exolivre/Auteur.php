@@ -29,7 +29,18 @@ class Auteur{
     }
 
 
-    public function afficherBibliographie(){
-        return "Livres de $this <br>";
+    public function afficherBibliographie(array $livres): string {
+        $result = "Livres de" . $this->auteur."<br>";
+        foreach ($livres as $livre) {
+            if ($livre->getAuteur() == $this){
+                $result .= $livre . "<br>"; 
+            
+            }
+        }
+        return $result;
+    }
+
+    public function __toString() : string {
+        return "$this->auteur";
     }
 }

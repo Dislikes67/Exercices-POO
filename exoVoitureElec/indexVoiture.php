@@ -5,8 +5,8 @@ require_once "VoitureElec.php";
 
 
 
-$voiture1 = new voiture2("Peugeot", "308");
-$voitureElec = new voitureElec("BMW", "I3", 150);
+$voiture1 = new Voiture2("Peugeot", "308");
+$voitureElec = new VoitureElec("BMW", "I3", 150);
 
 
 

@@ -5,6 +5,7 @@ class Livre extends Auteur {
     private int $parution;
     private int $nbPages;
     private int $prix;
+    private Auteur $auteur;
 
     public function __construct(string $titre, int $parution, int $nbPages, int $prix){
 
@@ -12,6 +13,7 @@ class Livre extends Auteur {
             $this->parution = $parution;
             $this->nbPages = $nbPages;
             $this->prix = $prix;
+            $this->auteur = $auteur;
     } 
 
 
@@ -31,6 +33,10 @@ class Livre extends Auteur {
         return $this->prix;
     }
 
+    public function getAuteur() : Auteur {
+        return $this->auteur;
+    }
+
 
 
     public function setTitre(string $titre){
@@ -45,23 +51,14 @@ class Livre extends Auteur {
         $this->nbPages = $nbPages;
 }
 
-public function setPrix(int $prix){
+    public function setPrix(int $prix){
         $this->prix = $prix;
     }
- 
-    
-    
-    public function afficherBibliographie(){
-        $result = "Livres de" . $this->auteur."<br>";
-        foreach (){
-            $result .= $this "<br>";
-        }
-        return $result;
-    
+
+
     public function __toString(){
         return "$this->titre $this->parution $this->nbPages $this->prix";
     }
-}
 }
 
 ?>
