@@ -5,7 +5,7 @@ class Titulaire{
     private string $prenom;
     private DateTime $dateNaissance;
     private string $ville;
-    private array $compte;
+    private array $compte = [];
 
     public function __construct(string $prenom, string $nom, string $dateNaissance, string $ville){
         $this->prenom = $prenom;
@@ -35,7 +35,7 @@ class Titulaire{
     public function getDateNaissance() {
         return $this->dateNaissance->format("d/m/Y");
     }
-    public function setDteNaissance($dateNaissance) {
+    public function setDateNaissance($dateNaissance) {
         $this->dateNaissance = $dateNaissance;
         return $this;
     }
@@ -55,12 +55,12 @@ class Titulaire{
         return $age->format("%Y ans");
     }
 
-//ajouter un compte à chaque fois que l'on en crée un au nom de ce titulaire
+//ajouter un à chaque fois que l'on en crée un au nom de ce titulaire
     public function addCompte(Compte $compte) {
         $this->comptes[] = $compte;
     }
 
-    public function __toString() {
+    public function __toString(){
         return "$this->prenom $this->nom";
     }
 

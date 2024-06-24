@@ -11,6 +11,7 @@ class Compte extends Titulaire{
         $this->libelle = $libelle;
         $this->soldeInit = $soldeInit;
         $this->devise = $devise;
+        $this->titulaire = $titulaire;
         $this->titulaire->addCompte($this);
     }
 
@@ -28,7 +29,7 @@ class Compte extends Titulaire{
         return $this->soldeInit;
     }
     public function setSoldeInit($soldeInit){
-        $this->SoldInit = $soldeInit;
+        $this->soldInit = $soldeInit;
         return $this;
     }
 
