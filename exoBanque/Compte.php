@@ -53,36 +53,36 @@ class Compte extends Titulaire{
 
 
     public function crediter(float $credit){
-        $this->soldeInit = $this->soldInit + $credit;
-        echo "compte crédité de $credit €.<br>";
+        $this->soldeInit += $credit;
+        echo "Compte crédité de $credit €.<br>";
     }
 
 
     public function debiter(float $debit){
         if($debit <= $this->soldeInit){
-            $this->soldeInit = $this->soldeInit - $debit;
-            echo "compte débité de $debit €.<br>";
+            $this->soldeInit -= $debit;
+            echo "Compte débité de $debit €.<br>";
         }
         else{
-            echo "somme à débiter trop élevée.";
+            echo "Somme à débiter trop élevée.";
         }
     }
 
 
     public function virer(Compte $compte, float $virement){
         if ($virement <= $this->soldInit){
-            $this->soldeInit = $this->soldeInit - $virement;
-            $compte->soldeInit = $compte->soldeInit + $virement;
-            echo "virement de $virement € du $this au $compte->libelle de $compte->titulaire.<br>";
+            $this->soldeInit -= $virement;
+            $compte->soldeInit += $virement;
+            echo "Virement de $virement € de $this->libelle au $compte->libelle de " . $compte->getTitulaire()->__toString() ."<br>";
         }
         else {
-            echo "somme à virer trop élevée.";
+            echo "Somme à virer trop élevée.";
         }
     }
 
 
-    public function __toStrin(): string{
-        return "$this->libelle de $this->titulaire";
+    public function __toString(): string{
+        return "$this->libelle de" . $this->titulaire->__toString();
     }
 
 

@@ -51,7 +51,7 @@ class Titulaire{
 
 //calculer l'age du titulaire à partir de sa date de naissance
     public function getAge(): string{
-        $age = date_diff(($this->dateNaissance), new DateTime());
+        $age = date_diff(($this->dateNaissance), new DateTime()); //Calcule la différence entre la date de naissance et la date actuelle.
         return $age->format("%Y ans");
     }
 
