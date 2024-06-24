@@ -1,6 +1,6 @@
 <?php
 
-class Compte extends Titulaire{
+class Compte {
     private string $libelle;
     private float $soldeInit;
     private string $devise;
@@ -71,8 +71,8 @@ class Compte extends Titulaire{
 
     public function virer(Compte $compte, float $virement){
         if ($virement <= $this->soldeInit){
-            $this->soldeInit -= $virement;
-            $compte->soldeInit += $virement;
+            $this->debiter($virement);
+            $compte->crediter($virement);
             echo "Virement de $virement € de $this->libelle au $compte->libelle  de " . $compte->getTitulaire()->__toString() ."<br>";
         }
         else {

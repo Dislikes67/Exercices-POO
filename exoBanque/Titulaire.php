@@ -57,7 +57,7 @@ class Titulaire{
 
 //ajouter un à chaque fois que l'on en crée un au nom de ce titulaire
     public function addCompte(Compte $compte) {
-        $this->comptes[] = $compte;
+        $this->compte[] = $compte;
     }
 
     public function __toString(){
@@ -66,7 +66,7 @@ class Titulaire{
 
     public function afficherTitulaire() {
         $result="$this, né(e) le : ".$this->getDateNaissance()." (".$this->getAge()."), habitant à $this->ville, est titulaire des comptes suivants :<br>";
-        foreach($this->comptes as $compte){
+        foreach($this->compte as $compte){
             $result.=$compte."<br>";
         }
         return $result;

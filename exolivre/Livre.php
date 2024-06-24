@@ -1,6 +1,6 @@
     <?php
 
-class Livre extends Auteur {
+class Livre {
     private string $titre;
     private int $parution;
     private int $nbPages;
