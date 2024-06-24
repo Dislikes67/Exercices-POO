@@ -1,7 +1,7 @@
 <?php
 
-spl_autoload_register(function($class_name){
-    include $class_name . '.php';
+spl_autoload_register(function($class_name){  // Fonction intégrée en PHP qui enregistre une fonction d'autochargement.
+    include $class_name . '.php';  // Cette ligne inclut le fichier correspondant au nom de la classe avec l'extension .php.
 });
 
 $titulaire1 = new Titulaire("John", "Doe", "1994-12-29", "Strasbourg");
