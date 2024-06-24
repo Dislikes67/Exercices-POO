@@ -3,7 +3,7 @@
 class Auteur {
     private string $prenom;
     private string $nom;
-// Création du tableau
+// tableau pour stocker les objets Livre associés à cet auteur.
     private array $bibliographie;
 
 
@@ -39,7 +39,7 @@ class Auteur {
         return $this;
     }
 
-//Méthode qui permet d'ajouter un objet livre au tableau dés qu'il est crée avec l'objet auteur en paramètre
+//Méthode qui permet d'ajouter un objet livre au tableau
     public function addLivre(Livre $livre) {
         $this->bibliographie[] = $livre;
     }
@@ -52,7 +52,7 @@ class Auteur {
             }
         return $result;
     }
-
+//Retourne le prénom et le nom de l'auteur sous forme de chaîne.
     public function __toString() : string {
         return $this->prenom . " " . $this->nom;
     }
