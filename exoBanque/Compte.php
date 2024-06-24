@@ -73,16 +73,16 @@ class Compte extends Titulaire{
         if ($virement <= $this->soldInit){
             $this->soldeInit -= $virement;
             $compte->soldeInit += $virement;
-            echo "Virement de $virement € de $this->libelle au $compte->libelle de " . $compte->getTitulaire()->__toString() ."<br>";
+            echo "Virement de $virement € de $this->libelle au $compte->libelle . de " . $compte->getTitulaire()->__toString() ."<br>";
         }
         else {
-            echo "Somme à virer trop élevée.";
+            echo "Somme à virer trop élevée.<br>";
         }
     }
 
 
     public function __toString(): string{
-        return "$this->libelle de" . $this->titulaire->__toString();
+        return "$this->libelle de $this->titulaire";
     }
 
 

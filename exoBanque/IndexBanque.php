@@ -5,7 +5,7 @@ spl_autoload_register(function($class_name){
 });
 
 $titulaire1 = new Titulaire("John", "Doe", "1994-12-29", "Strasbourg");
-$compte1 = new Compte("livret A", 85.50, "€", $titulaire1);
+$compte1 = new Compte("Livret A", 85.50, "€", $titulaire1);
 $compte2 = new Compte("LEP", 750, "€", $titulaire1);
 echo $titulaire1->afficherTitulaire();
 
