@@ -29,7 +29,7 @@ class Compte extends Titulaire{
         return $this->soldeInit;
     }
     public function setSoldeInit($soldeInit){
-        $this->soldInit = $soldeInit;
+        $this->soldeInit = $soldeInit;
         return $this;
     }
 
@@ -70,7 +70,7 @@ class Compte extends Titulaire{
 
 
     public function virer(Compte $compte, float $virement){
-        if ($virement <= $this->soldInit){
+        if ($virement <= $this->soldeInit){
             $this->soldeInit -= $virement;
             $compte->soldeInit += $virement;
             echo "Virement de $virement € de $this->libelle au $compte->libelle . de " . $compte->getTitulaire()->__toString() ."<br>";
