@@ -1,19 +1,21 @@
-<?php
+    <?php
 
-class Livre extends Auteur {
+class Livre {
     private string $titre;
     private int $parution;
     private int $nbPages;
-    private int $prix;
+    private float $prix;
+//Attribut de type auteur pour assigner un objet auteur au livre, pour l'ajouter a bibliographie
     private Auteur $auteur;
 
-    public function __construct(string $titre, int $parution, int $nbPages, int $prix, Auteur $auteur){
+    public function __construct(string $titre, int $parution, int $nbPages, float $prix, Auteur $auteur){
 
             $this->titre = $titre;
             $this->parution = $parution;
             $this->nbPages = $nbPages;                  //add livre to auteur 
             $this->prix = $prix;
             $this->auteur = $auteur;
+            $auteur->addLivre($this);
     } 
 
 
@@ -24,12 +26,12 @@ class Livre extends Auteur {
     public function getParution() : int{
         return $this->parution;
     }
-    
+        
     public function getNbPages() : int{
         return $this->nbPages;
     }
 
-    public function getPrix() : int{
+    public function getPrix() : float{
         return $this->prix;
     }
 
@@ -46,12 +48,12 @@ class Livre extends Auteur {
     public function setParution(int $parution){
         $this->parution = $parution;
     }
-    
+        
     public function setNbPages(int $nbPages){
         $this->nbPages = $nbPages;
 }
 
-    public function setPrix(int $prix){
+    public function setPrix(float $prix){
         $this->prix = $prix;
     }
 
@@ -59,10 +61,9 @@ class Livre extends Auteur {
         $this ->auteur = $auteur;
     }
 
-
+// Affiche les infos de l'objet livre
     public function __toString(){
-        return "$this->titre $this->parution $this->nbPages $this->prix";
+        return "$this->titre ($this->parution) : $this->nbPages pages / $this->prix €";
     }
 }
 
-?>
