@@ -134,7 +134,7 @@ class Voiture {
     }
 }
 
-$Voiture1 = new Voiture("Audi", "A5", 4);
+$Voiture1 = new Voiture("Fiat", "500", 4);
 $Voiture2 = new Voiture("Citroen", "C3", 4);
 $Voiture3 = new Voiture("Fiat", "Multipla", 4);
 $Voiture4 = new Voiture("Toyota", "Prius", 4);
@@ -151,3 +151,7 @@ echo $Voiture3->afficherInfos();
 
 
 ?>
+
+
+
+
