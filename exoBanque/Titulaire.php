@@ -7,7 +7,7 @@ class Titulaire{
     private string $ville;
     private array $compte = [];
 
-    public function __construct(string $prenom, string $nom, string $dateNaissance, string $ville){
+    public function __construct(string $prenom, string $nom, string $dateNaissance, string $ville) {
         $this->prenom = $prenom;
         $this->nom = $nom;
         $this->dateNaissance = new DateTime($dateNaissance);
