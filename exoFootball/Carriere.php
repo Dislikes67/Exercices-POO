@@ -29,4 +29,6 @@ class Carriere{
         $this->joueur[] = $joueur;
     }
 
-
+    public function afficherCarriere() {
+        $result=
+    }

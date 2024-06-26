@@ -61,7 +61,9 @@ class Joueur{
         return "$this->prenom $this->nom";
     }
 
-    public function afficherJoueur
+    public function afficherJoueur() {
+        $result="$this, "
+    }
 
 
 

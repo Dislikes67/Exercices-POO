@@ -21,3 +21,5 @@ $paysE = new Pays ("Espagne");
 $paysA = new Pays ("Argentine");
 $paysI = new Pays ("Italie");
 
+
+
