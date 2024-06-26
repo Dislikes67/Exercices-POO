@@ -9,3 +9,23 @@ class Equipe {
         $this->joueurs = $joueurs
         $this->anneeCreation = $anneeCreation
     }
+
+    public function getJoueurs(){
+        return $this->joueurs;
+    }
+    public function setJoueurs($joueurs){
+        $this->joueurs = $joueurs;
+        return $this;
+    }
+
+
+    public function getAnneeCreation(){
+        return $this->anneeCreation;
+    }
+    public function setAneeCreation($anneeCreation){
+        $this->anneeCreation = $anneeCreation;
+        return $this;
+    }
+
+
+    
