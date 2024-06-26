@@ -27,6 +27,12 @@ class Equipe {
         return $this;
     }
 
+
+    public function addPays(Pays $pays) {
+        $this->pays[] = $pays;
+    }
+
+
     public function __toString() : string{
         return "$this->"
     }
