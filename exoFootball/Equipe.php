@@ -31,5 +31,7 @@ class Equipe {
         return "$this->"
     }
 
-
+    public function afficherEquipe() {
+        $result="$this,
+    }
 }

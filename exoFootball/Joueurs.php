@@ -4,6 +4,7 @@ class Joueurs{
     private string $nom;
     private string $prenom;
     private DateTime $dateNaissance
+    private array $equipe = [];
 
 
     public function __contruct(string $prenom, string $nom, string $dateNaissance){
@@ -39,4 +40,12 @@ class Joueurs{
         return $this;
     }
 
+
+    public function addEquipe(Equipe $equipe) {
+        $this->equipe[] = $equipe;
 }
+
+
+    public function __toString() {
+        return "$this"
+    }

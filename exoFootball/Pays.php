@@ -20,8 +20,11 @@ class Pays{
         $this->pays[] = $pays;
     }
 
-    public function _toString(){
+    public function __toString(){
         return "$this->nomsPays";
     }
 
+    public function afficherPays(){
+        $result= 
+    }
 }
