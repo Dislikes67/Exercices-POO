@@ -1,20 +1,20 @@
 <?php
 
 class Equipe {
-    private Joueurs $joueurs
+    private Joueur $joueur
     private int $anneeCreation
 
 
-    public function __construct(string $joueurs, int $anneeCreation){
-        $this->joueurs = $joueurs
+    public function __construct(string $joueur, int $anneeCreation){
+        $this->joueur = $joueur
         $this->anneeCreation = $anneeCreation
     }
 
-    public function getJoueurs(){
-        return $this->joueurs;
+    public function getJoueur(){
+        return $this->joueur;
     }
-    public function setJoueurs($joueurs){
-        $this->joueurs = $joueurs;
+    public function setJoueur($joueur){
+        $this->joueur = $joueur;
         return $this;
     }
 

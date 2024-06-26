@@ -1,16 +1,17 @@
 <?php
 
-class Joueurs{
+class Joueur{
     private string $nom;
     private string $prenom;
-    private DateTime $dateNaissance
+    private string $origine;
+    private int $age;
     private array $equipe = [];
 
 
-    public function __contruct(string $prenom, string $nom, string $dateNaissance){
+    public function __contruct(string $prenom, string $nom, int $age, string $origine){
         $this->prenom = $prenom;
         $this->nom = $nom;
-        $this->dateNaissance = new DateTime($dateNaissance);
+        $this->age = $age;
     }
 
 
@@ -32,12 +33,21 @@ class Joueurs{
     }
 
 
-    public function getDateNaissance(){
-        return $this->dateNaissance->format("d/m/Y");
+    public function getAge(){
+        return $this->age;
     }
-    public function setDateNaissance(){
-        $this->dateNaissance = $dateNaissance;
+    public function setAge(){
+        $this->age = $age;
         return $this;
+    }
+
+
+    public function getOrigine(){
+        return $this->origine;
+    }
+    public function setOrigine(){
+        $this->origine = $origine;
+        return $origine;
     }
 
 
