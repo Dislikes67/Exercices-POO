@@ -3,7 +3,7 @@
 class Equipe {
     private Joueur $joueur
     private int $anneeCreation
-
+    private array $pays = [];
 
     public function __construct(string $joueur, int $anneeCreation){
         $this->joueur = $joueur

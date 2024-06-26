@@ -1,7 +1,9 @@
 <?php
 
 class Carriere{
-    private int dateSaison;
+    private int $dateSaison;
+    private array $equipe = [];
+    private array $joueur = [];
 }
 
 
@@ -17,3 +19,14 @@ class Carriere{
         $this->dateSaison = $dateSaison;
         return $this;
     }
+
+
+    public function addEquipe(Equipe $equipe) {
+        $this->equipe[] = $equipe;
+    }
+
+    public function addJoueur(Joueur $joueur) {
+        $this->joueur[] = $joueur;
+    }
+
+
