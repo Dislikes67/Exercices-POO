@@ -58,6 +58,13 @@ class Joueur{
 
 
     public function __toString() {
-        return "$this"
+        return "$this->prenom $this->nom";
     }
+
+    public function afficherJoueur
+
+
+
+
+
 }
