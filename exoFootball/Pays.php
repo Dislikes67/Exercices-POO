@@ -2,7 +2,7 @@
 
 class Pays{
     private string $nomsPays
-}
+
 
     public function __construct(string $nomsPays){
         $this->nomPays = $nomsPays;
@@ -24,4 +24,4 @@ class Pays{
         return "$this->nomsPays";
     }
 
-    
+}

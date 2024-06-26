@@ -4,7 +4,7 @@ class Joueurs{
     private string $nom;
     private string $prenom;
     private DateTime $dateNaissance
-}
+
 
     public function __contruct(string $prenom, string $nom, string $dateNaissance){
         $this->prenom = $prenom;
@@ -39,4 +39,4 @@ class Joueurs{
         return $this;
     }
 
-    
+}

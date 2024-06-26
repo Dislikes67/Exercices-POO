@@ -1,9 +1,9 @@
 <?php
 
 class Equipe {
-    private string $joueurs
+    private Joueurs $joueurs
     private int $anneeCreation
-}
+
 
     public function __construct(string $joueurs, int $anneeCreation){
         $this->joueurs = $joueurs
@@ -22,10 +22,14 @@ class Equipe {
     public function getAnneeCreation(){
         return $this->anneeCreation;
     }
-    public function setAneeCreation($anneeCreation){
+    public function setAnneeCreation($anneeCreation){
         $this->anneeCreation = $anneeCreation;
         return $this;
     }
 
+    public function __toString() : string{
+        return "$this->"
+    }
 
-    
+
+}
