@@ -1,13 +1,13 @@
 <?php
 
 class Equipe {
-    private Joueur $joueur
-    private int $anneeCreation
+    private Pays $pays;  // Lier pays à equipe étant donné que l'on a un tableau equipe dans pays
+    private int $anneeCreation;
     private array $pays = [];
 
     public function __construct(string $joueur, int $anneeCreation){
-        $this->joueur = $joueur
-        $this->anneeCreation = $anneeCreation
+        $this->joueur = $joueur;
+        $this->anneeCreation = $anneeCreation;
     }
 
     public function getJoueur(){
@@ -34,7 +34,7 @@ class Equipe {
 
 
     public function __toString() : string{
-        return "$this->"
+        return $this->nomEquipe;
     }
 
     public function afficherEquipe() {

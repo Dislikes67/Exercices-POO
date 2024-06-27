@@ -19,7 +19,7 @@ class Joueur{
         return $this->prenom;
     }
     public function setPrenom($prenom){
-        $this->prenom = $prenom
+        $this->prenom = $prenom;
         return $this;
     }
 
@@ -58,14 +58,8 @@ class Joueur{
 
 
     public function __toString() {
-        return "$this->prenom $this->nom";
+        return $this->prenom ." ". $this->nom;
     }
-
-    public function afficherJoueur() {
-        $result="$this, "
-    }
-
-
 
 
 
