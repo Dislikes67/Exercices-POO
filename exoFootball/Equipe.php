@@ -12,7 +12,7 @@ class Equipe {
         $this->anneeCreation = new DateTime($anneeCreation);
         $this->nomEquipe = $nomEquipe;
         $this->pays->ajouterEquipe($this); // ajouter equipe depuis pays car c'est là qu'est le tableau equipe
-        $this->carieres = []; // ajouter le tableau carrire à equipe
+        $this->carieres = []; // ajouter le tableau carriere à equipe
     }
 
 
@@ -59,11 +59,22 @@ class Equipe {
 
 }    
     public function __toString(){
-        return $this->nomEquipe;
+        return $this->nomEquipe."<br>";
     }
 
 
-    public function afficherJoueur
+    public function afficherJoueur(){
+
+        $result = "<ul> ";
+            $this->nomEquipe 
+            . $this->pays->getPays() . " - "
+            . $this->anneeCreation->format('Y') . '</br>';
+
+        foreach($this->carrieres as $carriere){ 
+            $result .= "<li>$carriere</li>";
+        }
+        $result = "</ul> ";
+}
 
 
 

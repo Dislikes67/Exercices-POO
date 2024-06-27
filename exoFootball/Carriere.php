@@ -4,7 +4,7 @@ class Carriere{
     private DateTime $dateSaison;
     private Equipe $equipe;
     private Joueur $joueur;
-}
+
 
 
     public function __construct(string $dateSaison, Equipe $equipe, Joueur $joueur){
@@ -20,20 +20,26 @@ class Carriere{
     public function getDateSaison() {
         return $this->dateSaison;
     }
-    public function setDateSaison() {
+    public function setDateSaison($dateSaison) {
         $this->dateSaison = $dateSaison;
         return $this;
     }
 
 
-    public function addEquipe(Equipe $equipe) {
-        $this->equipe[] = $equipe;
+    public function getEquipe() {
+        return $this->equipe;
+    }
+    public function setEquipe($equipe) {
+        $this->equipe = $equipe;
+        return $this;
     }
 
-    public function addJoueur(Joueur $joueur) {
-        $this->joueur[] = $joueur;
-    }
 
-    public function afficherCarriere() {
-        $result=
+    public function getJoueur() {
+        return $this->joueur;
     }
+    public function setJoueur($joueur){
+        $this->joueur = $joueur;
+        return $this;
+    }
+}
