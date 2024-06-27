@@ -20,7 +20,7 @@ class Pays{
 
     
     public function ajouterEquipe(Equipe $equipe) {
-        $this->equipes = $equipe;
+        $this->equipes[] = $equipe;
     }
     
 

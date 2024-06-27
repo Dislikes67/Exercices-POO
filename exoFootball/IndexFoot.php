@@ -21,18 +21,17 @@ $equipeJ = new Equipe ("Juventus", 1897, $paysI);
 $equipeM = new Equipe ("Manchester United", 1878, $paysA);
 $equipeRm = new Equipe ("Real Madrid", 1902, $paysE);
 
-$carriere1 = new Carriere (2017,$equipeP, "joueurK");
+$carriere1 = new Carriere (2017,$equipeP, $joueurK);
 
-$carriere2a = new Carriere (2009,$equipeRc, "joueurC");
-$carriere2b = new Carriere (2018,$equipeJ, "joueurC");
-$carriere2c = new Carriere (2021,$equipeM, "joueurC");
+$carriere2a = new Carriere (2009,$equipeRc, $joueurC);
+$carriere2b = new Carriere (2018,$equipeJ, $joueurC);
+$carriere2c = new Carriere (2021,$equipeM, $joueurC);
 
-$carriere3a = new Carriere (2004,$equipeB, "joueurL");
-$carriere3b = new Carriere (2021,$equipeP, "joueurL");
+$carriere3a = new Carriere (2004,$equipeB, $joueurL);
+$carriere3b = new Carriere (2021,$equipeP, $joueurL);
 
-$carriere4a = new Carriere (2013,$equipeB, "joueurN");
-$carriere4b = new Carriere (2017,$equipeP, "joueurN");
-
-
+$carriere4a = new Carriere (2013,$equipeB, $joueurN);
+$carriere4b = new Carriere (2017,$equipeP, $joueurN);
 
 
+echo $carriere1->afficherDetails();

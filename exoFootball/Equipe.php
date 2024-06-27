@@ -4,13 +4,13 @@ class Equipe {
     private Pays $pays;  // Lier pays à equipe étant donné que l'on a un tableau equipe dans pays
     private DateTime $anneeCreation;
     private string $nomEquipe;
-    private array $carieres = []; // Lier carriere à equipe 
+    private array $carrieres = []; // Lier carriere à equipe 
 
 
-    public function __construct(Pays $pays, string $nomEquipe, int $anneeCreation){
+    public function __construct(string $nomEquipe, int $anneeCreation, Pays $pays){
         $this->pays = $pays;
-        $this->anneeCreation = new DateTime($anneeCreation);
         $this->nomEquipe = $nomEquipe;
+        $this->anneeCreation = new DateTime($anneeCreation);
         $this->pays->ajouterEquipe($this); // ajouter equipe depuis pays car c'est là qu'est le tableau equipe
     }
 
