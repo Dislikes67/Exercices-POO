@@ -43,7 +43,7 @@ class Carriere{
         return $this;
     }
 
-    public function afficherDetails() {
+    public function afficherDetails() {  //???????????  
         return "Saison: " . $this->dateSaison->format('Y') . ", Équipe: " . $this->equipe->getNomEquipe() . ", Joueur: " . $this->joueur->getPrenom() . " " . $this->joueur->getNom();
 
     }
