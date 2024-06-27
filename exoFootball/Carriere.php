@@ -1,14 +1,19 @@
 <?php
 
 class Carriere{
-    private int $dateSaison;
-    private array $equipe = [];
-    private array $joueur = [];
+    private DateTime $dateSaison;
+    private Equipe $equipe;
+    private Joueur $joueur;
 }
 
 
-    public function __construct(int $dateSaison){
-        $this->dateSaison = $datesaison;
+    public function __construct(string $dateSaison, Equipe $equipe, Joueur $joueur){
+        $this->dateSaison = new DateTime($dateSaison);
+        $this->equipe = $equipe;
+        $this->joueur = $joueur;
+
+        $this->equipe->ajouterCarriere($this);
+        $this->joueur->ajouterCarriere($this);
     }
 
 

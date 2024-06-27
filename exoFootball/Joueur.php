@@ -5,13 +5,13 @@ class Joueur{
     private string $prenom;
     private string $origine;
     private int $age;
-    private array $pays = [];
 
 
     public function __contruct(string $prenom, string $nom, int $age, string $origine){
         $this->prenom = $prenom;
         $this->nom = $nom;
         $this->age = $age;
+        $this->origine = $origine;
     }
 
 
