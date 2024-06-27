@@ -22,9 +22,16 @@ $paysA = new Pays ("Argentine");
 $paysI = new Pays ("Italie");
 
 $carriere1 = new Carriere (2017,$equipeP, "joueurK");
-$carriere2 = new Carriere (2017,$equipeP, "joueurK");
-$carriere3 = new Carriere (2017,$equipeP, "joueurK");
-$carriere4 = new Carriere (2017,$equipeP, "joueurK");
+
+$carriere2 = new Carriere (2009,$equipeRc, "joueurC");
+$carriere2 = new Carriere (2018,$equipeJ, "joueurC");
+$carriere2 = new Carriere (2021,$equipeM, "joueurC");
+
+$carriere3 = new Carriere (2004,$equipeB, "joueurL");
+$carriere3 = new Carriere (2021,$equipeP, "joueurL");
+
+$carriere4 = new Carriere (2013,$equipeB, "joueurN");
+$carriere4 = new Carriere (2017,$equipeP, "joueurN");
 
 
 
