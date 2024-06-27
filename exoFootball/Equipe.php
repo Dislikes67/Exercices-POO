@@ -4,7 +4,7 @@ class Equipe {
     private Pays $pays;  // Lier pays à equipe étant donné que l'on a un tableau equipe dans pays
     private DateTime $anneeCreation;
     private string $nomEquipe;
-    private array $carieres; // Lier carriere à equipe 
+    private array $carieres = []; // Lier carriere à equipe 
 
 
     public function __construct(Pays $pays, string $nomEquipe, int $anneeCreation){
@@ -12,7 +12,6 @@ class Equipe {
         $this->anneeCreation = new DateTime($anneeCreation);
         $this->nomEquipe = $nomEquipe;
         $this->pays->ajouterEquipe($this); // ajouter equipe depuis pays car c'est là qu'est le tableau equipe
-        $this->carieres = []; // ajouter le tableau carriere à equipe
     }
 
 
@@ -50,9 +49,9 @@ class Equipe {
 
     public function listeJoueur(){       //methode pour afficher la liste des joueurs d'une equipe 
         echo "<br> Les joueurs d'une équipe <br>";
-        $carieres = "" ;
+        $carrieres = "" ;
 
-        foreach($this->carieres as $carriere){
+        foreach($this->carrieres as $carriere){
             $carrieres.=$carriere->getJoueur()."<br>";
     }
         return $carrieres;
@@ -68,7 +67,7 @@ class Equipe {
         $result = "<ul> ";
             $this->nomEquipe 
             . $this->pays->getPays() . " - "
-            . $this->anneeCreation->format('Y') . '</br>';
+            . $this->anneeCreation->format('Y') . '</br>';  // ???????????????????????????
 
         foreach($this->carrieres as $carriere){ 
             $result .= "<li>$carriere</li>";
