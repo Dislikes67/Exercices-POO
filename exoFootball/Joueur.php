@@ -5,6 +5,7 @@ class Joueur{
     private string $prenom;
     private string $origine;
     private int $age;
+    private array $carrieres = [];
 
 
     public function __contruct(string $prenom, string $nom, int $age, string $origine){
@@ -51,10 +52,9 @@ class Joueur{
     }
 
 
-    public function addPays(Pays $pays) {
-        $this->pays[] = $pays;
+    public function ajouterCarriere(Carriere $carriere) {
+        $this->carrieres[] = $carriere;
     }
-
 
 
     public function __toString() {
