@@ -8,7 +8,7 @@ class Joueur{
     private array $carrieres = [];
 
 
-    public function __contruct(string $prenom, string $nom, int $age, string $origine){
+    public function __construct(string $prenom, string $nom, int $age, string $origine){
         $this->prenom = $prenom;
         $this->nom = $nom;
         $this->age = $age;

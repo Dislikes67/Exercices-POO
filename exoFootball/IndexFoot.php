@@ -34,4 +34,4 @@ $carriere4a = new Carriere (2013,$equipeB, $joueurN);
 $carriere4b = new Carriere (2017,$equipeP, $joueurN);
 
 
-echo $carriere1->afficherDetails();
+echo $paysF->equipesDuPays();

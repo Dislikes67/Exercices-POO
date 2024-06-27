@@ -25,7 +25,7 @@ class Pays{
     
 
     public function equipesDuPays() {
-        $resultat = "<h1>Equipes du pays : </h1>";
+        $resultat = "<h1>France</h1>";    // comment afficher le pays pour chaque carte
         foreach($this->equipes as $equipe) {
             $resultat .= $equipe . "<br>";
         }
