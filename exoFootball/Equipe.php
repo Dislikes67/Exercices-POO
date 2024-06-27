@@ -3,18 +3,37 @@
 class Equipe {
     private Pays $pays;  // Lier pays à equipe étant donné que l'on a un tableau equipe dans pays
     private int $anneeCreation;
-    private array $pays = [];
+    private string $nomEquipe;
+    private array $joueurs = [];
 
-    public function __construct(string $joueur, int $anneeCreation){
+    public function __construct(Pays $pays, string $nomEquipe, string $joueur, int $anneeCreation){
         $this->joueur = $joueur;
         $this->anneeCreation = $anneeCreation;
     }
 
-    public function getJoueur(){
-        return $this->joueur;
+    public function getPays(){
+        return $this->pays;
     }
-    public function setJoueur($joueur){
-        $this->joueur = $joueur;
+    public function setPays($pays){
+        $this->pays = $pays;
+        return $this;
+    }
+
+
+    public function getNomEquipe(){
+        return $this->nomEquipe;
+    }
+    public function setNomEquipe($nomEquipe){
+        $this->nomEquipe = $nomEquipe;
+        return $this;
+    }
+
+
+    public function getJoueurs(){
+        return $this->joueurs;
+    }
+    public function setJoueurs($joueurs){
+        $this->joueurs = $joueurs;
         return $this;
     }
 
@@ -27,17 +46,8 @@ class Equipe {
         return $this;
     }
 
-
-    public function addPays(Pays $pays) {
-        $this->pays[] = $pays;
-    }
-
-
+    
     public function __toString() : string{
         return $this->nomEquipe;
-    }
-
-    public function afficherEquipe() {
-        $result="$this,
     }
 }
