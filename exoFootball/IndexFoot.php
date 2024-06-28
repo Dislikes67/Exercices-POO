@@ -35,4 +35,5 @@ $carriere4b = new Carriere ("2017-01-01",$equipeP, $joueurN);
 
 
 //echo $paysE->equipesDuPays(); OK
-//echo $carriere1->afficherDetails(); OK
+//echo $carriere1->detailsCarriere(); OK + faire foreach
+echo $equipeP->detailsEquipe();

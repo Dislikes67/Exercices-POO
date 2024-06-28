@@ -44,7 +44,7 @@ class Carriere{
     }
 
 
-    public function afficherDetails() {
+    public function detailsCarriere() {
         $resultat = $this->joueur->getPrenom() ." ". $this->joueur->getNom() . '<br>'.
                     $this->joueur->getOrigine() . " - " . $this->joueur->getAge() . " ans" . '<br>' .
                     $this->equipe->getNomEquipe() . " (" . $this->dateSaison->format('Y') . ")"; 

@@ -62,7 +62,7 @@ class Equipe {
     }
 
 
-    public function afficherJoueur(){
+    public function detailsEquipe(){
 
         $result = "<ul> ";
             $this->nomEquipe 
@@ -72,7 +72,7 @@ class Equipe {
         foreach($this->carrieres as $carriere){ 
             $result .= "<li>$carriere</li>";
         }
-        $result = "</ul> ";
+        $result = $resultat;
 }
 
 
