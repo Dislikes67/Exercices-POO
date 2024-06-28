@@ -63,13 +63,12 @@ class Joueur{
 
 
     public function detailsCarrieres(): string {
-        $result = "<h2>" . $this->joueur() . "</h2><ul>";
+        $result = "<h2>" . $this . "</h2><ul>";
 
             foreach($this->carrieres as $carriere){ 
             $result .= "<li>".$carriere->getEquipe()->getNomEquipe() . " ".$carriere->getAnneeSaison()."</li>";
             }
-            $result .= "</ul>";      //???????
-            return $resultat;
+            $result .= "</ul>";      
             return $result;
     }
 
