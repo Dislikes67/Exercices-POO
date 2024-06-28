@@ -16,7 +16,7 @@ class Joueur{
     }
 
 
-    public function getPrenom(){
+    public function getPrenom(): string{
         return $this->prenom;
     }
     public function setPrenom($prenom){
@@ -25,7 +25,7 @@ class Joueur{
     }
 
 
-    public function getNom(){
+    public function getNom(): string{
         return $this->nom;
     }
     public function setNom($nom){
@@ -34,7 +34,7 @@ class Joueur{
     }
 
 
-    public function getAge(){
+    public function getAge(): int{
         return $this->age;
     }
     public function setAge(){
@@ -43,7 +43,7 @@ class Joueur{
     }
 
 
-    public function getOrigine(){
+    public function getOrigine(): string{
         return $this->origine;
     }
     public function setOrigine(){
@@ -54,6 +54,23 @@ class Joueur{
 
     public function ajouterCarriere(Carriere $carriere) {
         $this->carrieres[] = $carriere;
+    }
+
+
+    public function getCarrieres(): array {
+        return $this->carrieres;
+    }
+
+
+    public function detailsCarrieres(): string {
+        $result = "<h2>" . $this->joueur() . "</h2><ul>";
+
+            foreach($this->carrieres as $carriere){ 
+            $result .= "<li>".$carriere->getEquipe()->getNomEquipe() . " ".$carriere->getAnneeSaison()."</li>";
+            }
+            $result .= "</ul>";      //???????
+            return $resultat;
+            return $result;
     }
 
 
