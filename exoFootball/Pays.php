@@ -30,7 +30,7 @@ class Pays{
     }
 
     public function equipesDuPays() {
-        $resultat = "<h1>$this->nomPays</h1>";    // comment afficher le pays pour chaque carte
+        $resultat = "<h1>$this->nomPays</h1>";  // pour afficher le pays appeler directement $nomPays
         foreach($this->equipes as $equipe) {
         $resultat .= $equipe . "<br>";
         }

@@ -23,7 +23,7 @@ $equipeRm = new Equipe ("Real Madrid", 1902, $paysE);
 
 $carriere1 = new Carriere (2017,$equipeP, $joueurK);
 
-$carriere2a = new Carriere (2009,$equipeRc, $joueurC);
+$carriere2a = new Carriere (2009,$equipeRm, $joueurC);
 $carriere2b = new Carriere (2018,$equipeJ, $joueurC);
 $carriere2c = new Carriere (2021,$equipeM, $joueurC);
 
@@ -34,4 +34,5 @@ $carriere4a = new Carriere (2013,$equipeB, $joueurN);
 $carriere4b = new Carriere (2017,$equipeP, $joueurN);
 
 
-echo $paysE->equipesDuPays();
+//echo $paysE->equipesDuPays(); OK
+echo $carriere2a->afficherDetails();
