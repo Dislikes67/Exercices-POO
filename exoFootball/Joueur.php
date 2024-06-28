@@ -3,8 +3,8 @@
 class Joueur{
     private string $nom;
     private string $prenom;
-    private string $origine;
     private int $age;
+    private string $origine;
     private array $carrieres = [];
 
 
