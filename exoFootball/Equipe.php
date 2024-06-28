@@ -57,42 +57,39 @@ class Equipe {
         return $carrieres;
 
 }    
-    public function __toString(){
-        return $this->nomEquipe."<br>";
-    }
 
 
     public function detailsEquipe(){
 
-        $result = "<ul> ";
-            $this->nomEquipe 
-            . $this->pays->getPays() . " - "
-            . $this->anneeCreation->format('Y') . '</br>';  // ???????????????
+        $result = $this->nomEquipe  . "<br>"
+            . $this->pays . " - "
+            . $this->anneeCreation->format('Y') . '</br>';
 
+        $result .= "<ul>";
         foreach($this->carrieres as $carriere){ 
-            $result .= "<li>$carriere</li>";
+            $result .= "<li>".$carriere->getJoueur()." ".$carriere->getAnneeSaison()."</li>";
         }
-        $result = $resultat;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        $result .= "</ul>";
+       return $result;
+        }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

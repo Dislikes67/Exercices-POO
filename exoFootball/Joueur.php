@@ -61,6 +61,6 @@ class Joueur{
         return $this->prenom ." ". $this->nom;
     }
 
-
+      
 
 }

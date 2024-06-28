@@ -25,6 +25,9 @@ class Carriere{
         return $this;
     }
 
+    public function getAnneeSaison() {
+        return $this->dateSaison->format("Y");
+    } 
 
     public function getEquipe() {
         return $this->equipe;
@@ -42,16 +45,15 @@ class Carriere{
         $this->joueur = $joueur;
         return $this;
     }
-
-
+    
     public function detailsCarriere() {
-        $resultat = $this->joueur->getPrenom() ." ". $this->joueur->getNom() . '<br>'.
+        $resultat = $this->getJoueur() . '<br>'.
                     $this->joueur->getOrigine() . " - " . $this->joueur->getAge() . " ans" . '<br>' .
                     $this->equipe->getNomEquipe() . " (" . $this->dateSaison->format('Y') . ")"; 
                     
                     
         return $resultat;
-    }  
+    }
 }
 
 
