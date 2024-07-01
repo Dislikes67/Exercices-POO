@@ -41,7 +41,7 @@ class Pays{
 
     public function equipesDuPays() {
 
-        $result = "<div class='card2'>";
+        $result = "<div class='card2'>";        //Inclusion de class CSS type 'card'
         $result .= "<h2>$this->nomPays</h2><br><br><br>";  // pour afficher le pays appeler directement $nomPays
         $result .= "<ul>";
         foreach($this->equipes as $equipe) {

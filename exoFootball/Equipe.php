@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,8 +71,8 @@ class Equipe {
 
     public function detailsEquipe(){
 
-        $result = "<div class='card'>";
-        $result .= $this->nomEquipe  . "<br>"
+        $result = "<div class='card'>";     //Inclusion de class CSS type 'card'
+        $result .= "<h2>$this->nomEquipe</h2>"
             . $this->pays . " - "
             . $this->anneeCreation->format('Y') . '<br><br><br>';
 

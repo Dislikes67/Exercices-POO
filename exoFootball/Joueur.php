@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,11 +70,12 @@ class Joueur{
     public function getCarrieres(): array {
         return $this->carrieres;
     }
-
-
+    
     public function detailsCarrieres(): string {
-        $result = "<div class = 'card'>";          //Inclusion de class CSS type 'card'
-        $result = "<h2>" . $this . "</h2><ul>";
+        $result = "<div class = 'card'>";
+        $result = "<h2>$this</h2><ul><br><br><br>";
+         
+                    
 
             foreach($this->carrieres as $carriere){ 
             $result .= "<li>".$carriere->getEquipe()->getNomEquipe() . " ".$carriere->getAnneeSaison()."</li>";
@@ -89,16 +90,12 @@ class Joueur{
         return $this->prenom ." ". $this->nom;
     }
 
-      
-
 }
 
 ?>
 
 </body>
 </html>
-
-
 
 
 
