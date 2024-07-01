@@ -73,7 +73,7 @@ class Joueur{
 
 
     public function detailsCarrieres(): string {
-        $result = "<div class = 'card'>";           //Inclusion de class CSS type 'card'
+        $result = "<div class = 'card'>";          //Inclusion de class CSS type 'card'
         $result = "<h2>" . $this . "</h2><ul>";
 
             foreach($this->carrieres as $carriere){ 

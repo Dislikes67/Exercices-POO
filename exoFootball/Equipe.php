@@ -78,7 +78,7 @@ class Equipe {
 
         $result .= "<ul>";
         foreach($this->carrieres as $carriere){ 
-            $result .= "<li>".$carriere->getJoueur()." ".$carriere->getAnneeSaison()."</li>";
+        $result .= "<li>".$carriere->getJoueur()." ".$carriere->getAnneeSaison()."</li>";
         }
         $result .= "</ul>";
         $result .= "</div>";

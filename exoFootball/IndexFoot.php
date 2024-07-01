@@ -17,7 +17,7 @@ spl_autoload_register(function($class_name){
 
 $paysF = new Pays ("France");
 $paysE = new Pays ("Espagne");
-$paysA = new Pays ("Argentine");
+$paysA = new Pays ("Angleterre");
 $paysI = new Pays ("Italie");
 
 $joueurK = new Joueur ("Killian", "Mbappe", 24, "France");
@@ -44,26 +44,24 @@ $carriere3b = new Carriere ("2021-01-01",$equipeP, $joueurL);
 $carriere4a = new Carriere ("2013-01-01",$equipeB, $joueurN);
 $carriere4b = new Carriere ("2017-01-01",$equipeP, $joueurN);
 
-?>
 
-<h1> Equipes </h1>
 
-<?php
+echo $paysE->equipesDuPays();
+echo $paysF->equipesDuPays();
+echo $paysA->equipesDuPays();
+echo $paysI->equipesDuPays();
 
-//echo $paysE->equipesDuPays();
-//echo $paysF->equipesDuPays();
-//echo $paysA->equipesDuPays();
-//echo $paysI->equipesDuPays();
+
 //echo $joueurC->detailsCarrieres();
 
 
 
-    echo $equipeP->detailsEquipe();
-    echo $equipeRc->detailsEquipe();
-    echo $equipeB->detailsEquipe();
-    echo $equipeJ->detailsEquipe();
-    echo $equipeM->detailsEquipe();
-    echo $equipeRm->detailsEquipe();
+    //echo $equipeP->detailsEquipe(); ok
+    //echo $equipeRc->detailsEquipe(); ok
+    //echo $equipeB->detailsEquipe(); ok
+    //echo $equipeJ->detailsEquipe(); ok
+    //echo $equipeM->detailsEquipe(); ok
+    //echo $equipeRm->detailsEquipe(); ok
     ?>
 </div>
 

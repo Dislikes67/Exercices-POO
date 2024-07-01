@@ -43,11 +43,14 @@ class Pays{
 
         $result = "<div class='card'>";
         $resultat = $this->nomPays . "<br>";  // pour afficher le pays appeler directement $nomPays
+        
+        $result .= "<ul>";
         foreach($this->equipes as $equipe) {
-        $resultat .= $equipe . "<br>";
+        $result .= $equipe . "<br>";
         }
+        $result .= "</ul>";
         $result .= "</div>";
-        return $resultat;
+        return $result;
     }
 
 
