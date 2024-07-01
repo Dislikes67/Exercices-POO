@@ -71,6 +71,7 @@ class Equipe {
 
     public function detailsEquipe(){
 
+        $result = "<div class= 'card'";
         $result = $this->nomEquipe  . "<br>"
             . $this->pays . " - "
             . $this->anneeCreation->format('Y') . '</br>';
@@ -80,8 +81,9 @@ class Equipe {
             $result .= "<li>".$carriere->getJoueur()." ".$carriere->getAnneeSaison()."</li>";
         }
         $result .= "</ul>";
+        $result .= "</div>";
        return $result;
-        }
+    }
 
 
 }

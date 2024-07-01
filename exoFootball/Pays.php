@@ -40,11 +40,14 @@ class Pays{
     }
 
     public function equipesDuPays() {
+
+        $result = "<div class='card'>";
         $resultat = $this->nomPays . "<br>";  // pour afficher le pays appeler directement $nomPays
         foreach($this->equipes as $equipe) {
         $resultat .= $equipe . "<br>";
         }
-       return $resultat;
+        $result .= "</div>";
+        return $resultat;
     }
 
 
