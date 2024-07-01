@@ -29,6 +29,16 @@ body {
     width: 300px;
 }
 
+.card3 {
+    background-color: #6AAF5C;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(136, 4, 4, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+}
+
 .card h2 {
     margin-top: 0;
 }
@@ -50,7 +60,11 @@ body {
     padding: 10px;
 }
 
-
+.card3 li {
+    background-color: #6AAF5C;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
 
 
 

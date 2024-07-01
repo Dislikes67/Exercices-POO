@@ -72,15 +72,18 @@ class Joueur{
     }
     
     public function detailsCarrieres(): string {
-        $result = "<div class = 'card'>";
-        $result .= "<h2>$this</h2><ul><br><br><br>";
+        $result = "<div class ='card3'>";
+        $result .= "<h2>$this</h2>"
+              . $this->getOrigine(). " - "
+              . $this->age . " ans" . '<br><br><br>';
+        $result .= "<ul>";
          
-            foreach($this->carrieres as $carriere){ 
-            $result .= "<li>".$carriere->getEquipe()->getNomEquipe() . " ".$carriere->getAnneeSaison()."</li>";
-            }
-            $result .= "</ul>";
-            $result .="</div>";
-            return $result;
+        foreach($this->carrieres as $carriere){ 
+        $result .= "<li>". $carriere->getEquipe()->getNomEquipe() . " ".$carriere->getAnneeSaison()."</li>";
+        }
+        $result .= "</ul>";
+        $result .="</div>";
+        return $result;
     }
 
 
@@ -94,13 +97,3 @@ class Joueur{
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

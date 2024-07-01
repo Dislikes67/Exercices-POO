@@ -62,7 +62,10 @@ echo $equipeJ->detailsEquipe();
 echo $equipeM->detailsEquipe(); 
 echo $equipeRm->detailsEquipe(); 
 
+echo $joueurK->detailsCarrieres();
 echo $joueurC->detailsCarrieres();
+echo $joueurL->detailsCarrieres();
+echo $joueurN->detailsCarrieres();
 
 
 
