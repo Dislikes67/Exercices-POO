@@ -12,7 +12,7 @@
 
 class Equipe {
     private Pays $pays;  // Lier pays à equipe étant donné que l'on a un tableau equipe dans pays
-    private DateTime $anneeCreation;
+    private int $anneeCreation;
     private string $nomEquipe;
     private array $carrieres = []; // Lier carriere à equipe 
 
@@ -20,7 +20,7 @@ class Equipe {
     public function __construct(string $nomEquipe, int $anneeCreation, Pays $pays){
         $this->pays = $pays;
         $this->nomEquipe = $nomEquipe;
-        $this->anneeCreation = new DateTime($anneeCreation);
+        $this->anneeCreation =$anneeCreation;
         $this->pays->ajouterEquipe($this); // ajouter equipe depuis pays car c'est là qu'est le tableau equipe
     }
 
@@ -74,7 +74,7 @@ class Equipe {
         $result = "<div class='card'>";     //Inclusion de class CSS type 'card'
         $result .= "<h2>$this->nomEquipe</h2>"
             . $this->pays . " - "
-            . $this->anneeCreation->format('Y') . '<br><br><br>';
+            . $this->anneeCreation . '<br><br><br>';
 
         $result .= "<ul>";
         foreach($this->carrieres as $carriere){ 

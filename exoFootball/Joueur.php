@@ -73,10 +73,8 @@ class Joueur{
     
     public function detailsCarrieres(): string {
         $result = "<div class = 'card'>";
-        $result = "<h2>$this</h2><ul><br><br><br>";
+        $result .= "<h2>$this</h2><ul><br><br><br>";
          
-                    
-
             foreach($this->carrieres as $carriere){ 
             $result .= "<li>".$carriere->getEquipe()->getNomEquipe() . " ".$carriere->getAnneeSaison()."</li>";
             }

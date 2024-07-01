@@ -57,10 +57,10 @@ class Carriere{
     }
     
     public function detailsCarrieres(): string {
-    $result = $this->joueur() . '<br>'.
-                    $this->joueur->getOrigine() . " - " . $this->joueur->getAge() . " ans" . '<br>' .
-                    $this->equipe->getNomEquipe() . " (" . $this->dateSaison->format('Y') . ")";
-    }
+        $result = $this->joueur() . '<br>'.
+                        $this->joueur->getOrigine() . " - " . $this->joueur->getAge() . " ans" . '<br>' .
+                        $this->equipe->getNomEquipe() . " (" . $this->dateSaison->format('Y') . ")";
+        }
 
 }
 ?>

@@ -19,11 +19,14 @@ $paysF = new Pays ("France");
 $paysE = new Pays ("Espagne");
 $paysA = new Pays ("Angleterre");
 $paysI = new Pays ("Italie");
+$paysB = new Pays ("Bresil");
+$paysAr = new Pays ("Argentine");
+$paysP = new Pays ("Portugal");
 
-$joueurK = new Joueur ("Killian", "Mbappe", 24, "France");
-$joueurC = new Joueur ("Cristiano", "Ronaldo", 37, "Portugal");
-$joueurL = new Joueur ("Lionel", "Messi", 34, "Argentine");
-$joueurN = new Joueur ("Neymar", "Junior", 32, "Bresil");
+$joueurK = new Joueur ("Killian", "Mbappe", 24, $paysF);
+$joueurC = new Joueur ("Cristiano", "Ronaldo", 37, "$paysP");
+$joueurL = new Joueur ("Lionel", "Messi", 34, "$paysAr");
+$joueurN = new Joueur ("Neymar", "Junior", 32, "$paysB");
 
 $equipeP = new Equipe ("PSG", 1970, $paysF);
 $equipeRc = new Equipe ("Racing Club Stras", 1906, $paysF);
