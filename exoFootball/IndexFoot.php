@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football</title>
+    <link href="exoFootball.css" rel="stylesheet">
+    
+</head>
+<body>
 
 <?php
 
@@ -34,9 +44,29 @@ $carriere3b = new Carriere ("2021-01-01",$equipeP, $joueurL);
 $carriere4a = new Carriere ("2013-01-01",$equipeB, $joueurN);
 $carriere4b = new Carriere ("2017-01-01",$equipeP, $joueurN);
 
+?>
 
-//echo $paysE->equipesDuPays(); OK
-echo $joueurC->detailsCarrieres(); // faire foreach
-//echo $equipeP->detailsEquipe();
+<h1> Equipes </h1>
 
+<?php
+
+//echo $paysE->equipesDuPays();
+//echo $paysF->equipesDuPays();
+//echo $paysA->equipesDuPays();
+//echo $paysI->equipesDuPays();
+//echo $joueurC->detailsCarrieres();
+
+
+
+    echo $equipeP->detailsEquipe();
+    echo $equipeRc->detailsEquipe();
+    echo $equipeB->detailsEquipe();
+    echo $equipeJ->detailsEquipe();
+    echo $equipeM->detailsEquipe();
+    echo $equipeRm->detailsEquipe();
+    ?>
+</div>
+
+</body>
+</html>
 

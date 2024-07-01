@@ -71,8 +71,8 @@ class Equipe {
 
     public function detailsEquipe(){
 
-        $result = "<div class= 'card'";
-        $result = $this->nomEquipe  . "<br>"
+        $result = "<div class='card'>";
+        $result .= $this->nomEquipe  . "<br>"
             . $this->pays . " - "
             . $this->anneeCreation->format('Y') . '</br>';
 
@@ -85,7 +85,9 @@ class Equipe {
        return $result;
     }
 
-
+    public function __toString() {
+        return $this->nomEquipe;
+    }
 }
 
 ?>
