@@ -43,7 +43,25 @@ body {
     margin-top: 0;
 }
 
+.card2 h2 {
+    margin-top: 0;
+}
+
+.card3 h2 {
+    margin-top: 0;
+}
+
 .card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card2 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card3 ul {
     list-style-type: none;
     padding: 0;
 }

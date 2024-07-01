@@ -76,6 +76,7 @@ class Joueur{
         $result .= "<h2>$this</h2>"
               . $this->getOrigine(). " - "
               . $this->age . " ans" . '<br><br><br>';
+        
         $result .= "<ul>";
          
         foreach($this->carrieres as $carriere){ 
