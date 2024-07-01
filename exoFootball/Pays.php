@@ -41,24 +41,22 @@ class Pays{
 
     public function equipesDuPays() {
 
-        $result = "<div class='card'>";
-        $resultat = $this->nomPays . "<br>";  // pour afficher le pays appeler directement $nomPays
-        
+        $result = "<div class='card2'>";
+        $result .= "<h2>$this->nomPays</h2><br><br><br>";  // pour afficher le pays appeler directement $nomPays
         $result .= "<ul>";
         foreach($this->equipes as $equipe) {
-        $result .= $equipe . "<br>";
+        $result .= "<li>" . $equipe . "<br></li>";
         }
         $result .= "</ul>";
         $result .= "</div>";
         return $result;
     }
 
-
-    public function __toString(){
-        return "$this->nomPays";
+    public function __toString() {
+        return $this->nomPays;
     }
-}
 
+}
 ?>
 
 </body>

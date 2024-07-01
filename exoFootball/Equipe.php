@@ -74,7 +74,7 @@ class Equipe {
         $result = "<div class='card'>";
         $result .= $this->nomEquipe  . "<br>"
             . $this->pays . " - "
-            . $this->anneeCreation->format('Y') . '</br>';
+            . $this->anneeCreation->format('Y') . '<br><br><br>';
 
         $result .= "<ul>";
         foreach($this->carrieres as $carriere){ 

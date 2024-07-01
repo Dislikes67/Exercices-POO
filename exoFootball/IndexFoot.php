@@ -46,22 +46,22 @@ $carriere4b = new Carriere ("2017-01-01",$equipeP, $joueurN);
 
 
 
-echo $paysE->equipesDuPays();
-echo $paysF->equipesDuPays();
-echo $paysA->equipesDuPays();
-echo $paysI->equipesDuPays();
+//echo $paysE->equipesDuPays();
+//echo $paysF->equipesDuPays();
+//echo $paysA->equipesDuPays();
+//echo $paysI->equipesDuPays();
 
 
 //echo $joueurC->detailsCarrieres();
 
 
 
-    //echo $equipeP->detailsEquipe(); ok
-    //echo $equipeRc->detailsEquipe(); ok
-    //echo $equipeB->detailsEquipe(); ok
-    //echo $equipeJ->detailsEquipe(); ok
-    //echo $equipeM->detailsEquipe(); ok
-    //echo $equipeRm->detailsEquipe(); ok
+    echo $equipeP->detailsEquipe(); 
+    echo $equipeRc->detailsEquipe(); 
+    echo $equipeB->detailsEquipe(); 
+    echo $equipeJ->detailsEquipe(); 
+    echo $equipeM->detailsEquipe(); 
+    echo $equipeRm->detailsEquipe(); 
     ?>
 </div>
 
