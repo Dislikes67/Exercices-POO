@@ -11,12 +11,12 @@ class CalculerAge{                   // Création d'une class.
     private DateTime $date;                   
 
 
-    public function __construct($naissance,$date) {
+    public function __construct($naissance,$date){
         $this-> naissance = new DateTime($naissance); //Le constructeur initialise les propriétés $naissance et $date -
         $this-> date = new DateTime($date);             //- en créant des objets DateTime à partir des chaînes de caractères passées en paramètres.
     }
 
-    public function calculerAge() {             //Cette méthode calcule la différence date de naissance et date de référence en utilisant la - 
+    public function calculerAge(){             //Cette méthode calcule la différence date de naissance et date de référence en utilisant la - 
         $age = $this-> naissance->diff($this->date); //- méthode diff de la classe DateTime.Le résultat est un objet DateInterval qui est ensuite
         return $age->format('%y ans, %m mois, %d jours'); //- formaté en années, mois et jours à l'aide de la méthode format.
     }
